@@ -3,13 +3,21 @@ const { Schema, model } = mongoose;
 
 const cashSchema = new Schema(
   {
-    question: String,
-    questionId: Number,
-    answers: Array,
-    rightAnswer: String,
+    thousand: Number,
+    hundred: Number,
+    fiveHundred: Number,
+    twoHundred: Number,
+    fifty: Number,
+    twenty: Number,
+    ten: Number,
+    five: Number,
+    two: Number,
+    one: Number,
+    other: Number,
+    sum: Number,
   },
   { versionKey: false, timestamps: true }
 );
 
-const Contact = model("qa-tech", cashSchema);
+const Contact = model("cash", cashSchema);
 module.exports = Contact;
