@@ -1,17 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const {
-  listCash,
-  getContactById,
-  removeContact,
-  addCash,
-  updateContact,
-} = require("../../model/index");
+const { listCash, addCash } = require("../../model/index");
 const validate = require("./validation");
 
 router.get("/", async (_req, res, next) => {
   try {
     const list = await listCash();
+    console.log("list:", list);
     res.json({
       status: "success",
       code: 200,

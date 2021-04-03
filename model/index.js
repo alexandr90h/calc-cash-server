@@ -3,6 +3,7 @@ const db = require("./db");
 
 const listCash = async () => {
   const results = await Contact.find({});
+  console.log("results:", results);
   return results;
 };
 const addCash = async (body) => {
@@ -11,8 +12,5 @@ const addCash = async (body) => {
 };
 module.exports = {
   listCash,
-  //   getContactById,
-  //   removeContact,
   addCash,
-  //   updateContact,
 };
