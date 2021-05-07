@@ -50,7 +50,6 @@ router.post("/", validate.addCash, async (req, res, next) => {
     next(error);
   }
 });
-
 // router.delete("/:contactId", async (req, res, next) => {
 //   try {
 //     const contact = await removeContact(req.params.contactId);
