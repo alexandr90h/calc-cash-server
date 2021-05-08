@@ -5,7 +5,12 @@ const validate = require("./validation");
 router.get("/", async (req, res, next) => {
   try {
     const list = await listSetings();
-    console.log("listSetings", list);
+    // console.log("listSetings", list);
+    res.json({
+      status: "success",
+      code: 200,
+      data: { list },
+    });
   } catch (error) {
     next(error);
   }

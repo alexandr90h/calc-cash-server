@@ -6,7 +6,7 @@ const validate = require("./validation");
 router.get("/", async (_req, res, next) => {
   try {
     const list = await listCash();
-    console.log("list:", list);
+    // console.log("list:", list);
     res.json({
       status: "success",
       code: 200,
