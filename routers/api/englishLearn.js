@@ -12,6 +12,22 @@ router.post("/addItem", async (req, res, next) => {
             data: results,
         });
     } catch (error) {
+        console.log(error);
+        next(error);
+    }
+});
+router.get("/getItems", async (req, res, next) => {
+    try {
+        const results = await TranslationScheme.find();
+        if (results) {
+            res.json({
+                status: "success",
+                code: 200,
+                results,
+            });
+        }
+    } catch (error) {
+        console.log(error);
         next(error);
     }
 });

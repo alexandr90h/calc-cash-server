@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const {string} = require("joi");
 const { Schema, model } = mongoose;
 
 const translationScheme = new Schema(

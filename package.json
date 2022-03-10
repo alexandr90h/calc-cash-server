@@ -18,7 +18,8 @@
     "express": "4.17.1",
     "joi": "^17.4.0",
     "mongoose": "^5.11.18",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "nodemon": "^2.0.15"
   },
   "author": "",
   "license": "ISC",
